@@ -1,0 +1,16 @@
+<div class="header">
+    <a routerLink="/home" class="logo">NIKE</a>
+  
+    <i class="{{icon}} icon" (click)="setActive()"></i>
+    
+  
+    <div class="navbar"
+    [ngClass]="{'active':active}" (click)="setMenu()">
+    <a routerLink="/home" class="a" >HOME</a>
+    <a routerLink="/men"  class="a">MEN</a>
+    <a routerLink="/women"  class="a">WOMEN</a>
+    <a routerLink="/kids"  class="a">KIDS</a>
+    <a routerLink="/collection" class="a">COLLECTION</a>
+    </div>
+  </div>
+  

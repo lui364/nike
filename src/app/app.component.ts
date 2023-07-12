@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nike';
+  
+  public active: boolean = false;
+public icon = "fa-solid fa-bars";
+  
+  setMenu(){
+    this.active = !this.active;
+
+    if(this.active === true){
+      this.icon = "fa-solid fa-x";
+    }else{
+      this.icon = "fa-solid fa-bars";
+    }
+  }
 }

@@ -1,0 +1,130 @@
+.container{
+    margin-top: 80px;
+}
+
+.con{
+    animation-name: wipe-in-bottom-right;
+    animation-duration: 3.5s;
+}
+h1{
+margin-top: 90px;
+font-size: 58px;
+color: white;
+width: 592px;
+}
+
+h3{
+    color: white;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+p{
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+
+.buttons{
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.buttons button{
+    width: 150px;
+    font-weight: 600;
+}
+
+.side{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 310px;
+    margin-top: -30px;
+}
+
+.side li a{
+    background: transparent;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid red;
+    transition: all .6s;
+}
+
+.side li a:hover{
+    background: gold;
+    color: black;
+}
+
+
+
+.contenedor img{
+   margin-top: 40px;
+   width: 500px;
+    margin-left: 100px;
+    animation-name: wipe-in-down;
+    animation-duration: 1.5s;
+}
+
+
+@media (max-width:767px){
+    
+    .container{
+        margin-left: -5px;
+    }
+}
+
+@media (max-width:516px){
+    
+    .contenedor img{
+        margin-left: 50px;
+    }
+}
+
+
+@media (max-width:464px){
+    
+    .contenedor img{
+        margin-left: 12px;
+    }
+
+    .side{
+        margin-left: -40px;
+        margin-top: 30px;
+    }
+}
+
+
+@keyframes wipe-in-down {
+    from {
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:down"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+  }
+
+
+  @keyframes wipe-in-bottom-right {
+    from {
+      clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+    }
+    to {
+      clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+    }
+  }
+  
+  [transition-style="in:wipe:bottom-right"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+  }
+
+
+

@@ -1,0 +1,84 @@
+
+.body{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    animation-name: wipe-in-right;
+    animation-duration: 1s;
+}
+button{
+    border-radius: 15px;
+}
+
+.card{
+    background: transparent;
+    border: none;
+}
+
+img:hover{
+    filter: brightness(0.5);
+}
+
+
+
+@media (max-width:572px){
+    
+    .card{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:450px){
+    
+    .card{
+        margin-left: 0px;
+        width: 400px;
+    }
+}
+
+
+@media (max-width:433px){
+    
+    .card{
+        margin-left:6%;
+        width: 300px;
+    }
+}
+
+@media (max-width:389px){
+    
+    .card{
+        margin-left:3%;
+        width: 300px;
+    }
+}
+
+
+@media (max-width:363px){
+    
+    .card{
+        margin-left: 2%;
+        width: 300px;
+    }
+}
+
+@media (max-width:359px){
+    
+    .card{
+        margin-left: 1%;
+        width: 300px;
+    }
+}
+
+@keyframes wipe-in-right {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:right"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
+  }

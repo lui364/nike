@@ -1,0 +1,92 @@
+/*NAVBAR*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 6%;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    margin-top: -22px;
+    animation-name:wipe-in-right;
+    animation-duration: 2.5s;
+}
+.logo{
+    font-size: 2.5rem;
+    color: red;
+    font-weight: 700;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.a{
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: black;
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar .a:hover{
+    color:rgb(145, 14, 4);
+}
+
+
+.icon{
+   font-size: 3.6rem;
+   display: none;
+   
+}
+
+
+@media (max-width:1014px){
+    
+    .icon{
+        display: block;
+        color: red;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: red;
+        border: .4rem solid var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0; 
+        padding: 10px;
+        color: white;
+        font-weight: 700;
+    }
+
+    .active{
+        display: none;
+    }
+    
+}
+
+
+
+@keyframes wipe-in-right {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:right"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
+  }
